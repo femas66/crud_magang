@@ -107,7 +107,7 @@ $user = $q_user->fetch_assoc();
 <div style="margin-left:15%">
 
 <div class="w3-container" style="background: #45ADA8; color: white">
-  <h1>Tambah Hobi</h1>
+  <h1>Halaman Hobi</h1>
 </div>
 
 <div class="w3-container">
