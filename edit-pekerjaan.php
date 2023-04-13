@@ -153,7 +153,7 @@ $user = $q_user->fetch_assoc();
     </select>
     <hr>
     <div class="mb-3">
-      <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;">Simpan</button>
+      <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;"><i class="fa-solid fa-floppy-disk"></i>  Simpan</button>
     </div>
   </form>
   </div>

@@ -10,6 +10,7 @@ $user = $q_user->fetch_assoc();
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://kit.fontawesome.com/83685fdc33.js" crossorigin="anonymous"></script>
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -94,12 +95,12 @@ $user = $q_user->fetch_assoc();
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block" style="width:15%; background-color: #45ADA8; font-weight: bold; color: white;">
   <h3 class="w3-bar-item">CRUD</h3>
-  <a href="index.php" class="w3-bar-item w3-button">Data Warga</a>
-  <a href="halaman-pekerjaan.php" class="w3-bar-item w3-button">Data pekerjaan</a>
-  <a href="halaman-hobi.php" class="w3-bar-item w3-button">Data hobi</a>
-  <a href="halaman-vaksin.php" class="w3-bar-item w3-button">Data vaksin</a>
-  <a href="halaman-agama.php" class="w3-bar-item w3-button">Data agama</a>
-  <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
+  <a href="index.php" class="w3-bar-item w3-button"><i class="fa-solid fa-person"></i> Data Warga</a>
+  <a href="halaman-pekerjaan.php" class="w3-bar-item w3-button"><i class="fa-solid fa-briefcase"></i> Data pekerjaan</a>
+  <a href="halaman-hobi.php" class="w3-bar-item w3-button"><i class="fa-solid fa-gamepad"></i> Data hobi</a>
+  <a href="halaman-vaksin.php" class="w3-bar-item w3-button"><i class="fa-solid fa-syringe"></i> Data vaksin</a>
+  <a href="halaman-agama.php" class="w3-bar-item w3-button"><i class="fa-solid fa-star-and-crescent"></i> Data agama</a>
+  <a href="logout.php" class="w3-bar-item w3-button"><i class="fa-solid fa-arrow-right"></i> Logout</a>
 </div>
 
 <!-- Page Content -->
@@ -111,7 +112,7 @@ $user = $q_user->fetch_assoc();
 
 <div class="w3-container">
   <br>
-  <a href="tambah-data.php" class="tambah">Tambah</a>
+  <a href="tambah-data.php" class="tambah"><i class="fa-solid fa-plus"></i> Tambah</a>
   <hr>
   <table class="tabel">
     <tr class="judulatas">

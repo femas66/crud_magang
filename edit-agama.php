@@ -151,7 +151,7 @@ $data = $a->fetch_assoc();
     <hr>
     <div class="mb-3">
 
-      <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;">Simpan</button>
+      <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;"><i class="fa-solid fa-floppy-disk"></i>  Simpan</button>
     </div>
   </form>
   </div>

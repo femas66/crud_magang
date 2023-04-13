@@ -76,6 +76,7 @@ $user = $q_user->fetch_assoc();
     }
     
   </style>
+  <script src="https://kit.fontawesome.com/83685fdc33.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,12 +97,12 @@ $user = $q_user->fetch_assoc();
 <!-- Sidebar -->
 <div class="w3-sidebar w3-bar-block" style="width:15%; background-color: #45ADA8; font-weight: bold; color: white;">
   <h3 class="w3-bar-item">CRUD</h3>
-  <a href="index.php" class="w3-bar-item w3-button">Data Warga</a>
-  <a href="halaman-pekerjaan.php" class="w3-bar-item w3-button">Data pekerjaan</a>
-  <a href="halaman-hobi.php" class="w3-bar-item w3-button">Data hobi</a>
-  <a href="halaman-vaksin.php" class="w3-bar-item w3-button">Data vaksin</a>
-  <a href="halaman-agama.php" class="w3-bar-item w3-button">Data agama</a>
-  <a href="logout.php" class="w3-bar-item w3-button">Logout</a>
+  <a href="index.php" class="w3-bar-item w3-button"><i class="fa-solid fa-person"></i> Data Warga</a>
+  <a href="halaman-pekerjaan.php" class="w3-bar-item w3-button"><i class="fa-solid fa-briefcase"></i> Data pekerjaan</a>
+  <a href="halaman-hobi.php" class="w3-bar-item w3-button"><i class="fa-solid fa-gamepad"></i> Data hobi</a>
+  <a href="halaman-vaksin.php" class="w3-bar-item w3-button"><i class="fa-solid fa-syringe"></i> Data vaksin</a>
+  <a href="halaman-agama.php" class="w3-bar-item w3-button"><i class="fa-solid fa-star-and-crescent"></i> Data agama</a>
+  <a href="logout.php" class="w3-bar-item w3-button"><i class="fa-solid fa-arrow-right"></i> Logout</a>
 </div>
 
 <!-- Page Content -->
@@ -128,7 +129,7 @@ $user = $q_user->fetch_assoc();
     </div>
     <hr>
     <div class="mb-3">
-    <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;">Tambah</button>
+    <button type="submit" name="submit" class="btn" style="background: #45ADA8; font-weight: bold; color:white; border-radius: 18px;"><i class="fa-solid fa-plus"></i> Tambah</button>
     </div>
   </form>
   </div>
