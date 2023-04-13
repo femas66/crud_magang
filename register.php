@@ -130,6 +130,19 @@
     <title>FEMAS</title>
   </head>
   <body>
+  <script>
+    function ceksama() {
+      let password = document.getElementById('password').value;
+      let confirmpassword = document.getElementById('confirmpassword').value;
+      if (password == confirmpassword) {
+        document.getElementById('error').style.visibility = 'hidden';
+        document.getElementById('btn').disabled = false;
+      } else {
+        document.getElementById('btn').disabled = true;
+        document.getElementById('error').style.visibility = 'visible';
+      }
+    }
+    </script>
     <div class="center">
       <h1>Daftar</h1>
       <form method="post">
@@ -144,17 +157,20 @@
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password">
+          <input type="password" required name="password" id="password" onkeyup="ceksama()">
           <span></span>
           <label>Password</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password">
+          <input type="password" required id="confirmpassword" onkeyup="ceksama()">
           <span></span>
           <label>Konfirmasi Password</label>
         </div>
-        <button type="submit" name="submit">Daftar</button>
-        <div class="signup_link">
+        <button type="submit" name="submit" id="btn" disabled>Daftar</button>
+        <div class="signup_link" style="color:red; visibility: hidden; margin-top: -2px; padding-top: -10px; padding-bottom: -10px;" id="error">
+          Password tidak sama
+        </div>
+        <div class="signup_link" style="margin-top: -14px;">
           Sudah punya akun? <a href="login.php">Login</a>
         </div>
       </form>

@@ -1,6 +1,10 @@
 <?php
 
 include 'koneksi.php';
+session_start();
+if (!isset($_SESSION['reset_id'])) {
+  header("location: lupa-password.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -106,10 +110,6 @@ include 'koneksi.php';
         cursor: pointer;
         outline: none;
       }
-      button:hover{
-        border-color: #99b898;
-        transition: .5s;
-      }
       .signup_link{
         margin: 30px 0;
         text-align: center;
@@ -135,22 +135,38 @@ include 'koneksi.php';
     <title>FEMAS</title>
   </head>
   <body>
+    <script>
+      
+    </script>
     <div class="center">
       <h1>Reset Password</h1>
       <form method="post">
         <div class="txt_field">
-          <input type="password" required name="password" autofocus>
+          <script>
+            function ceksama() {
+              let password = document.getElementById('password').value;
+              let confirmpassword = document.getElementById('confirmpassword').value;
+              if (password == confirmpassword) {
+                document.getElementById('error').style.visibility = 'hidden';
+                document.getElementById('btn').disabled = false;
+              } else {
+                document.getElementById('btn').disabled = true;
+                document.getElementById('error').style.visibility = 'visible';
+              }
+            }
+          </script>
+          <input type="password" required name="password" autofocus id="password" onkeyup="ceksama()">
           <span></span>
           <label>Password baru</label>
         </div>
         <div class="txt_field">
-          <input type="password" required name="password" autofocus>
+          <input type="password" required name="password" autofocus id="confirmpassword" onkeyup="ceksama()">
           <span></span>
           <label>Konfirmasi Password baru</label>
         </div>
-        <button type="submit" name="submit">Reset</button>
-        <div class="signup_link">
-          Masukan password baru
+        <button type="submit" name="submit" disabled id="btn">Reset</button>
+        <div class="signup_link" style="color: red; visibility: hidden;" id="error">
+          Password tidak sama
         </div>
       </form>
     </div>
@@ -158,7 +174,6 @@ include 'koneksi.php';
 </html>
 <?php
 if (isset($_POST['submit'])) {
-  session_start();
   $id_user = $_SESSION['reset_id'];
   $password_baru = md5($koneksi->real_escape_string($_POST['password']));
   $sql = "UPDATE users SET password = '$password_baru' WHERE id_user = '$id_user'";
